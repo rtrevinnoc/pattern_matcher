@@ -12,6 +12,14 @@ This module implements a simple pipelined pattern matcher, it takes two 4-bit se
 - Fabrication technology: Sky130 PDK
 - Estimated: ~500 logic gates max
 
+You can compile the module and the testbench with the following commands:
+
+```sh
+verilator +1364-2005ext+v --public -Wall --cc pattern_correlator.v --exe pattern_correlator_tb.cpp
+make -j -C obj_dir -f Vpattern_correlator.mk Vpattern_correlator
+./obj_dir/Vpattern_correlator
+```
+
 The truth table for the module is:
 
 | Pattern A (4-bit) | Pattern B (4-bit) | XOR Result (A⊕B) | OR Reduction | Match Output |
