@@ -11,6 +11,7 @@
 *.o
 *.obj
 obj_dir
+build/
 
 # Precompiled Headers
 *.gch
