@@ -9,8 +9,8 @@ def main():
 
     chip.register_source("bobby-matcher", __file__)
 
-    chip.input("pattern_matcher.v", package="bobby-matcher")
-    chip.input("Arty-A7-100-Master.xdc", package="bobby-matcher")
+    chip.input("pattern_matcher.v")#, package="bobby-matcher")
+    chip.input("Arty-A7-100-Master.xdc")#, package="bobby-matcher")
     chip.set('fpga', 'partname', 'XC7A100TCSG324-1')
 
     chip.use(fpgaflow_demo)
